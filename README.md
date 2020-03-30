@@ -6,7 +6,7 @@ An assembly MIPS project that recursively solves a maze and also allows for user
 * [Functions](#functions)
 * [Polling](#polling)
 * [Interrupts](#interrupts)
-
+* [Demonstration](#demonstration)
 
 ## General info
 This project was built using qtSPIM v.9.1.20 . It takes hard-coded the string input of "I"s and dots as the maze. The user can press ```w,a,s,d``` to move and also ```e``` to show the solution.
@@ -31,3 +31,6 @@ Thre extra functions are declared here to replace the functionality of syscalls.
 ## Interrupts
 Enables interrupts for CPU and keyboard in the "exceptions.s" file and adds two global variables. The ```cdata``` which contains the users input (the exception handler takes the data from the "RecieverData" address and puts it in that variable). The ```cflag``` which is 0 and goes to 1 if a key is pressed.
 So the handler is a loop where if ```cflag``` becomes 1, it breaks the loop makes ```cflag=0``` and puts the Reciever Data in the ```cdata``` register, then it reenters the loop.
+
+## Demonstration
+![demo gif](./demo.gif)
